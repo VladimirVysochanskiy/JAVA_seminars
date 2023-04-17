@@ -11,21 +11,21 @@ public class homeTask03 {
         System.out.println("Введите число A: ");
         int a = iScanner.nextInt();
         System.out.println("Введите операцию (+, -, *, /): ");
-        String op = iScanner.nextLine();
+        char op = iScanner.next().charAt(0);
         System.out.println("Введите число B: ");
         int b = iScanner.nextInt();
         iScanner.close();
         switch (op) {
-            case "+":
+            case '+':
             System.out.printf("%d + %d = %d \n", a, b, a + b);
             break;
-            case "-":
+            case '-':
             System.out.printf("%d - %d = %d \n", a, b, a - b);
             break;
-            case "*":
+            case '*':
             System.out.printf("%d * %d = %d \n", a, b, a * b);
             break;
-            case "/":
+            case '/':
             System.out.printf("%d / %d = %d \n", a, b, a / b);
             break; }
     }
