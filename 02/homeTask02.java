@@ -25,10 +25,18 @@ Sample Output:
 Рецепт 1. Колбаса 100гр, мороженое 200гр. Возьмите колбаса и измелчите его. Посыпьте измельчённый колбаса на мороженое.
 Рецепт 2. Вишня 100гр, молоко 3кг. Смешать, есть) Радоваться жизни.
  */
-public class homeTask02 {
+import java.util.Scanner;
+ public class homeTask02 {
 
     public static void main(String[] args) {
-        
+        Scanner iScanner = new Scanner(System.in);
+        System.out.println("Количество строчек в книге: ");
+        int n = iScanner.nextInt();
+        String txt[] = 
+        for (i = 0; i < n; i++) {
+
+        }
+
 
     }
 }
