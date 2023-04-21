@@ -4,24 +4,7 @@ import java.util.Arrays;
  Реализовать алгоритм сортировки слиянием и выборкой.(Самое эффективное , 
  это изучить эти сортировки на Питоне , и постараться написать их на java)
 
-def insertion_sort(nums):
-    # Сортировку начинаем со второго элемента, т.к. считается, что первый элемент уже отсортирован
-    for i in range(1, len(nums)):
-        item_to_insert = nums[i]
-        # Сохраняем ссылку на индекс предыдущего элемента
-        j = i - 1
-        # Элементы отсортированного сегмента перемещаем вперёд, если они больше
-        # элемента для вставки
-        while j >= 0 and nums[j] > item_to_insert:
-            nums[j + 1] = nums[j]
-            j -= 1
-        # Вставляем элемент
-        nums[j + 1] = item_to_insert
-
-# Проверяем, что оно работает
-random_list_of_nums = [9, 1, 15, 28, 6]
-insertion_sort(random_list_of_nums)
-print(random_list_of_nums)
+    
  */
 public class homeTask01 {
 
@@ -37,12 +20,47 @@ public class homeTask01 {
         }
     }
 
+    static void mergeSort(int[] nums) {
+        if (nums.length > 1) {
+            int mid = nums.length / 2;
+            int[] left = Arrays.copyOfRange(nums, 0, mid);
+            int[] right = Arrays.copyOfRange(nums, mid, nums.length);
+            mergeSort(left);
+            mergeSort(right);
+            int i = 0;
+            int j = 0;
+            int k = 0;
+            while (i < left.length & j < right.length) {
+                if (left[i] < right[j]) {
+                    nums[k] = left[i];
+                    i++;
+                }
+                else {
+                    nums[k] = right[j];
+                    j++;
+                }
+                k++;
+            }
+            while (i < left.length) {
+                nums[k] = left[i];
+                i++;
+                k++;
+            }
+            while (j < right.length) {
+                nums[k] = right[j];
+                j++;
+                k++;
+            }
+        }
+    }
+
     public static void main(String[] args) {
-        int[] numArray = {5, 6, 9, 3, 2, 6, 9, 8, 2, 6, 1, 25, 2, 369};
+        int[] numArray = {10, 3, 5, 4, 9, 10, 8, 2, 1, 7, 6};
+        int[] numArray1 = {10, 3, 5, 4, 9, 10, 8, 2, 1, 7, 6};
         System.out.println(Arrays.toString(numArray));
-        int nnn = 569;
-        System.out.println(nnn);
         insertionSort(numArray);
         System.out.println(Arrays.toString(numArray));
+        mergeSort(numArray1);
+        System.out.println(Arrays.toString(numArray1));
     }
 }
