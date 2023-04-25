@@ -6,6 +6,7 @@
 4) читает сохраненный файл и выводит содержимое в логгер
 5) удаляет сохраненный файл
  */
+/*
 public class homeTask03 {
 
     public static void main(String[] args) {
@@ -36,3 +37,4 @@ public class homeTask03 {
         }
     }
 }
+*/

@@ -4,11 +4,11 @@ Task_4. *
 знаком вопроса, например, 2? + ?5 = 69. Требуется восстановить выражение до верного 
 равенства. Предложить хотя бы одно решение или сообщить, что его нет.
 */
-import java.util.Scanner;
+//import java.util.Scanner;
 public class homeTask04 {
 
     public static void main(String[] args) {
-        Scanner iScanner = new Scanner(System.in);
+        //Scanner iScanner = new Scanner(System.in);
         
     }
 }
