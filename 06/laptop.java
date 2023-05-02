@@ -8,10 +8,10 @@ public class laptop {
     public int procFrequency;
     public int ramSize;
     public int hdSize;
-    public int opSystem;
+    public String opSystem;
 
     public laptop(String type, String producer, String model, double diagonal, String procName, int coresNumber, 
-        int procFrequency, int ramSize, int hdSize, int opSystem) {
+        int procFrequency, int ramSize, int hdSize, String opSystem) {
             this.type = type;
             this.producer = producer;
             this.model = model;
