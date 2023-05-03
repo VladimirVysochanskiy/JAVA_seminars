@@ -23,5 +23,19 @@ public class laptop {
             this.hdSize = hdSize;
             this.opSystem = opSystem;
     }
+
+    public void outAll() {
+        
+        System.out.println("\nТип устройства: " + type);
+        System.out.println("Производитель: " + producer);
+        System.out.println("Модель: " + model);
+        System.out.println("Диагональ монитора: " + diagonal + " дюймов");
+        System.out.println("Процессор: " + procName + " " + procFrequency + "ГГц " + coresNumber + " ядер");
+        System.out.println("Объём оперативной памяти: " + ramSize);
+        System.out.println("Объём жесткого диска: " + hdSize + "МБайт");
+        System.out.println("Операционная система: " + opSystem);
+        System.out.println();
+    }
+
     
 }
